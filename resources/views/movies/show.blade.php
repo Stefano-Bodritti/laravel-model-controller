@@ -7,10 +7,10 @@
     <title>Home Movies</title>
   </head>
   <body>
-    <h1>Lista movies</h1>
-    @foreach ($movies as $movie)
-      <h2>{{$movie->title}}</h2>
-      <a href="{{route("movies.show", ["movie" => $movie->id])}}">Dettagli film</a>
-    @endforeach
+    <a href="{{route("movies.index")}}">Torna indietro</a>
+    <h2>{{$movie->title}}</h2>
+    <p>Regia: {{$movie->director}}</p>
+    <p>Durata: {{$movie->duration}} minuti</p>
+    <p>Generi: {{$movie->genre}}</p>
   </body>
 </html>
