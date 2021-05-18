@@ -20,8 +20,8 @@
       </div>
       @endif
 
-      <form action="{{route('movies.update', $movie)}}" method="POST">
-        @method('UPDATE')
+      <form action="{{route('movies.update', ['movie' => $movie->id])}}" method="POST">
+        @method('PUT')
         @csrf
 
         <div class="form-group">
