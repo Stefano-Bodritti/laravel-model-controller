@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+
+  .box_movie {
+    height: 130px;
+    width: 330px;
+    margin: 10px 15px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+
+    h3 {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .link {
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: red;
+      }
+    }
+  } 
+}
+
+.back {
+  margin: 15px;
+  a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 10px;
+    background-color: red;
+    border: 1px solid white;
+  }
+}
+
+.details {
+  max-width: 1080px;
+  margin: 10px auto;
+  text-align: center;
+
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+}
