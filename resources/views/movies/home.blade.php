@@ -23,6 +23,7 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Elimina</button>
           </form>
+          <a href="{{route("movies.edit", ["movie" => $movie->id])}}"><button type="button" class="btn btn-primary">Modifica</button></a>
         </div>
       </div>
       @endforeach
