@@ -36,7 +36,24 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:100',
+            'director' =>'required|string|max:50',
+            'genre' => 'required|string|max:50',
+            'duration' => 'required|max:300'
+        ]);
+
+        // Movie::create($request->all());
+        $data = $request->all();
+        $movieNew = new Movie;
+        $movieNew->title = $data['title'];
+        $movieNew->director = $data['director'];
+        $movieNew->genre = $data['genre'];
+        $movieNew->duration = $data['duration'];
+
+        $movieNew->save();
+
+        return redirect()->route('movies.show', $movieNew);
     }
 
     /**
