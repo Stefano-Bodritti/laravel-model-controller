@@ -16,7 +16,14 @@
       @foreach ($movies as $movie)
       <div class="box_movie">
         <h3>{{$movie->title}}</h3>
-        <div class="link"><a href="{{route("movies.show", ["movie" => $movie->id])}}">Dettagli film</a></div>
+        <div class="link">
+          <a href="{{route("movies.show", ["movie" => $movie->id])}}"><button type="button" class="btn btn-success">Dettagli film</button></a>
+          <form action="{{route('movies.destroy', ["movie" => $movie->id])}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Elimina</button>
+          </form>
+        </div>
       </div>
       @endforeach
     </div>

@@ -10080,3 +10080,7 @@ h1 {
   font-size: 24px;
   margin: 15px 0;
 }
+
+.link form {
+  display: inline-block;
+}
