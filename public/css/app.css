@@ -10018,13 +10018,18 @@ h1 {
 }
 
 .container {
+  max-width: 1180px;
+  margin: inehrit auto;
+}
+
+.container_home {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px;
 }
-.container .box_movie {
+.container_home .box_movie {
   height: 130px;
   width: 330px;
   margin: 10px 15px;
@@ -10032,16 +10037,22 @@ h1 {
   background-color: black;
   color: white;
 }
-.container .box_movie h3 {
+.container_home .box_movie h3 {
   text-align: center;
   padding: 10px;
 }
-.container .box_movie .link {
+.container_home .box_movie .link {
   text-align: center;
 }
-.container .box_movie .link a {
+.container_home .box_movie .link a {
   text-decoration: none;
   color: red;
+}
+
+.add {
+  position: fixed;
+  right: 40px;
+  top: 30px;
 }
 
 .back {

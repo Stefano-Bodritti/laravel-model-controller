@@ -1,4 +1,4 @@
-.container {
+.container_home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,12 @@
       }
     }
   } 
+}
+
+.add {
+  position: fixed;
+  right: 40px;
+  top: 30px;
 }
 
 .back {

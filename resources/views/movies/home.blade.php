@@ -9,7 +9,10 @@
   </head>
   <body>
     <h1>Lista movies</h1>
-    <div class="container">
+    <div class="text-right add">
+      <a href="{{route("movies.create")}}"><button type="button" class="btn btn-primary">Aggiungi film</button></a>
+    </div>
+    <div class="container container_home">
       @foreach ($movies as $movie)
       <div class="box_movie">
         <h3>{{$movie->title}}</h3>
