@@ -53,7 +53,7 @@ class MovieController extends Controller
 
         $movieNew->save();
 
-        return redirect()->route('movies.show', $movieNew);
+        return redirect()->route('movies.show', $movieNew)->with('success', 'Il film ' . $movieNew->title . ' è stato aggiunto');
     }
 
     /**
@@ -110,6 +110,6 @@ class MovieController extends Controller
     public function destroy(Movie $movie)
     {
         $movie->delete();
-        return redirect()->route("movies.index");
+        return redirect()->route("movies.index")->with('success', 'Il film ' . $movie->title . ' è stato eliminato');;
     }
 }

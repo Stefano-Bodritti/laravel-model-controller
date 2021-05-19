@@ -15,5 +15,10 @@
       <p>Durata: {{$movie->duration}} minuti</p>
       <p>Generi: {{$movie->genre}}</p>
     </div>
+    @if (session('success'))
+    <div class="alert alert-success">
+      {{ session('success') }}
+    </div>
+    @endif
   </body>
 </html>
