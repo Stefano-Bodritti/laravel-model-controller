@@ -26,21 +26,21 @@
 
         <div class="form-group">
           <label for="title">Titolo</label>
-          <input type="text" class="form-control" id="title" name="title" placeholder="Inserisci il titolo">
+          <input type="text" class="form-control" id="title" name="title" placeholder="Inserisci il titolo" value="{{ old("title") }}">
         </div>
         <div class="form-group">
           <label for="director">Regista</label>
-          <input type="text" class="form-control" id="director" name="director" placeholder="Inserisci il regista">
+          <input type="text" class="form-control" id="director" name="director" placeholder="Inserisci il regista" value="{{ old("director") }}">
         </div>
         <div class="form-group">
           <label for="genre">Genere</label>
-          <input type="text" class="form-control" id="genre" name="genre" placeholder="Inserisci i generi">
+          <input type="text" class="form-control" id="genre" name="genre" placeholder="Inserisci i generi" value="{{ old("genre") }}">
         </div>
         <div class="form-group">
           <label for="duration">Durata (minuti)</label>
           <select class="form-control" id="duration" name="duration" placeholder="Inserisci la durata">
             @for ($i = 1; $i < 300; $i++)
-              <option value="{{$i}}">{{$i}}</option>
+              <option value="{{$i}}" {{ $i == old('duration') ? 'selected' : '' }}>{{$i}}</option>
             @endfor
           </select>
         </div>

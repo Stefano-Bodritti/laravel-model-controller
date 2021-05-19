@@ -12,18 +12,13 @@
     border: 2px solid white;
     background-color: black;
     color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 
     h3 {
-      text-align: center;
-      padding: 10px;
-    }
-
-    .link {
-      text-align: center;
-      a {
-        text-decoration: none;
-        color: red;
-      }
+      margin-bottom: 20px;
     }
   } 
 }

@@ -8,7 +8,7 @@
     <title>{{$movie->title}} - Dettagli film</title>
   </head>
   <body>
-    <div class="back"><a href="{{route("movies.index")}}">Torna indietro</a></div>
+    <div class="back"><a href="{{route("movies.index")}}">Torna alla home</a></div>
     <div class="details">
       <h1>{{$movie->title}}</h1>
       <p>Regia: {{$movie->director}}</p>

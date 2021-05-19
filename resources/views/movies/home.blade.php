@@ -15,15 +15,17 @@
     <div class="container container_home">
       @foreach ($movies as $movie)
       <div class="box_movie">
-        <h3>{{$movie->title}}</h3>
-        <div class="link">
-          <a href="{{route("movies.show", ["movie" => $movie->id])}}"><button type="button" class="btn btn-success">Dettagli film</button></a>
-          <form action="{{route('movies.destroy', ["movie" => $movie->id])}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Elimina</button>
-          </form>
-          <a href="{{route("movies.edit", ["movie" => $movie->id])}}"><button type="button" class="btn btn-primary">Modifica</button></a>
+        <div class="inner_box">
+          <h3>{{$movie->title}}</h3>
+          <div class="link">
+            <a href="{{route("movies.show", ["movie" => $movie->id])}}"><button type="button" class="btn btn-success">Dettagli film</button></a>
+            <form action="{{route('movies.destroy', ["movie" => $movie->id])}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger">Elimina</button>
+            </form>
+            <a href="{{route("movies.edit", ["movie" => $movie->id])}}"><button type="button" class="btn btn-primary">Modifica</button></a>
+          </div>
         </div>
       </div>
       @endforeach
