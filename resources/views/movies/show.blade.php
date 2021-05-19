@@ -14,6 +14,7 @@
       <p>Regia: {{$movie->director}}</p>
       <p>Durata: {{$movie->duration}} minuti</p>
       <p>Generi: {{$movie->genre}}</p>
+      <p>Trama: {{$movie->plot}}</p>
     </div>
     @if (session('success'))
     <div class="alert alert-success">

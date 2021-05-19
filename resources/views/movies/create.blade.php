@@ -37,6 +37,10 @@
           <input type="text" class="form-control" id="genre" name="genre" placeholder="Inserisci i generi" value="{{ old("genre") }}">
         </div>
         <div class="form-group">
+          <label for="plot">Trama</label>
+          <textarea type="text" class="form-control" id="plot" name="plot" placeholder="Inserisci la trama" value="{{ old("plot") }}"></textarea>
+        </div>
+        <div class="form-group">
           <label for="duration">Durata (minuti)</label>
           <select class="form-control" id="duration" name="duration" placeholder="Inserisci la durata">
             @for ($i = 1; $i < 300; $i++)

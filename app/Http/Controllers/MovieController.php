@@ -40,7 +40,8 @@ class MovieController extends Controller
             'title' => 'required|string|max:100',
             'director' =>'required|string|max:50',
             'genre' => 'required|string|max:50',
-            'duration' => 'required|max:300'
+            'duration' => 'required|max:300',
+            'plot' => 'required|string'
         ]);
 
         // Movie::create($request->all());
@@ -92,7 +93,8 @@ class MovieController extends Controller
             'title' => 'required|string|max:100',
             'director' => 'required|string|max:50',
             'genre' => 'required|string|max:50',
-            'duration' => 'required|max:300'
+            'duration' => 'required|max:300',
+            'plot' => 'required|string'
         ]);
 
         $data = $request->all();
